@@ -51,7 +51,7 @@ class HomePageState extends State<HomePage> {
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.menu, color: Colors.white),
+            icon: const Icon(Icons.person, color: Colors.white),
             onPressed: () {
               // Tombol menu
             },
@@ -117,7 +117,6 @@ class HomePageContent extends StatelessWidget {
               ),
             ),
             Container(
-              // color: Colors.blue,
               padding: const EdgeInsets.all(10),
               child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -127,21 +126,35 @@ class HomePageContent extends StatelessWidget {
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
                   SizedBox(height: 10),
-                  Row(
-                    children: [
-                      CustomCard(
-                        color: Colors.black,
-                        title: 'Doctor Strange',
-                        // icon: Icons.access_alarm),
-                        image: 'assets/images/drstrange.jpg',
-                      ),
-                      CustomCard(
-                        color: Color.fromARGB(255, 0, 0, 0),
-                        title: 'Dandadan',
-                        // icon: Icons.access_alarm),
-                        image: 'assets/images/dandadan.jpeg',
-                      )
-                    ],
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        CustomCard(
+                          color: Color.fromARGB(255, 7, 7, 7),
+                          title: 'Doctor Strange',
+                          image: 'assets/images/drstrange.jpg',
+                        ),
+                        SizedBox(width: 10), // Spacer between cards
+                        CustomCard(
+                          color: Color.fromARGB(255, 7, 7, 7),
+                          title: 'Dandadan',
+                          image: 'assets/images/dandadan.jpeg',
+                        ),
+                        SizedBox(width: 10), // Spacer between cards
+                        CustomCard(
+                          color: Color.fromARGB(255, 7, 7, 7),
+                          title: 'Dandadan',
+                          image: 'assets/images/dandadan.jpeg',
+                        ),
+                        SizedBox(width: 10), // Spacer between cards
+                        CustomCard(
+                          color: Color.fromARGB(255, 7, 7, 7),
+                          title: 'Dandadan',
+                          image: 'assets/images/dandadan.jpeg',
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -230,6 +243,7 @@ class CustomCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       child: Card(
+        color: color,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -249,7 +263,10 @@ class CustomCard extends StatelessWidget {
             const SizedBox(height: 8),
             Text(
               title,
-              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+              style: const TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white),
             ),
           ],
         ),
