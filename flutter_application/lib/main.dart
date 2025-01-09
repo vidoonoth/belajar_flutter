@@ -46,7 +46,7 @@ class HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: const Text(
-          "Belajar Flutter",
+          "Nononton",
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
         ),
         actions: [
@@ -98,6 +98,7 @@ class HomePageContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(0.5),
       // color: Colors.amber,
       child: SingleChildScrollView(
         child: Column(
@@ -108,7 +109,7 @@ class HomePageContent extends StatelessWidget {
               child: const Align(
                 alignment: Alignment.center,
                 child: Text(
-                  'Belajar Flutter',
+                  'Nononton',
                   style: TextStyle(
                       color: Color.fromARGB(255, 255, 255, 255),
                       fontWeight: FontWeight.w600,
@@ -132,26 +133,44 @@ class HomePageContent extends StatelessWidget {
                       children: [
                         CustomCard(
                           color: Color.fromARGB(255, 7, 7, 7),
-                          title: 'Doctor Strange',
-                          image: 'assets/images/drstrange.jpg',
+                          title: 'One Piece',
+                          image: 'assets/images/onepiece.jpeg',
                         ),
-                        SizedBox(width: 10), // Spacer between cards
+                        SizedBox(width: 5), // Spacer between cards
                         CustomCard(
                           color: Color.fromARGB(255, 7, 7, 7),
                           title: 'Dandadan',
                           image: 'assets/images/dandadan.jpeg',
                         ),
-                        SizedBox(width: 10), // Spacer between cards
+                        SizedBox(width: 5), // Spacer between cards
                         CustomCard(
                           color: Color.fromARGB(255, 7, 7, 7),
-                          title: 'Dandadan',
-                          image: 'assets/images/dandadan.jpeg',
+                          title: 'Solo Leveling',
+                          image: 'assets/images/solo-leveling.jpeg',
                         ),
-                        SizedBox(width: 10), // Spacer between cards
+                        SizedBox(width: 5), // Spacer between cards
                         CustomCard(
                           color: Color.fromARGB(255, 7, 7, 7),
-                          title: 'Dandadan',
-                          image: 'assets/images/dandadan.jpeg',
+                          title: 'Jujutsu Kaisen',
+                          image: 'assets/images/jujutsu-kaisen.jpeg',
+                        ),
+                        SizedBox(width: 5), // Spacer between cards
+                        CustomCard(
+                          color: Color.fromARGB(255, 7, 7, 7),
+                          title: 'Bleach',
+                          image: 'assets/images/bleach.jpeg',
+                        ),
+                        SizedBox(width: 5), // Spacer between cards
+                        CustomCard(
+                          color: Color.fromARGB(255, 7, 7, 7),
+                          title: 'Naruto',
+                          image: 'assets/images/naruto.jpeg',
+                        ),
+                        SizedBox(width: 5), // Spacer between cards
+                        CustomCard(
+                          color: Color.fromARGB(255, 7, 7, 7),
+                          title: 'Dragon Ball',
+                          image: 'assets/images/dragon-ball.jpeg',
                         ),
                       ],
                     ),
@@ -160,67 +179,62 @@ class HomePageContent extends StatelessWidget {
               ),
             ),
             Container(
-              color: Colors.green[400],
               padding: const EdgeInsets.all(10),
-              child: Column(
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    'Rekomendasi Drakor',
+                  Text(
+                    'Rekomendasi Drama Korea (drakor)',
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
-                  const SizedBox(height: 10),
-                  Row(
-                    children: [
-                      _buildCard('Konten 1', Colors.red),
-                      _buildCard('Konten 2', Colors.red),
-                      _buildCard('Konten 3', Colors.red),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              color: Colors.yellow[700],
-              padding: const EdgeInsets.all(10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    'Rekomendasi Series',
-                    style: TextStyle(color: Colors.white, fontSize: 18),
-                  ),
-                  const SizedBox(height: 10),
-                  Row(
-                    children: [
-                      _buildCard('Konten 1', Colors.red),
-                      _buildCard('Konten 2', Colors.red),
-                      _buildCard('Konten 3', Colors.red),
-                    ],
+                  SizedBox(height: 10),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        CustomCard(
+                          color: Color.fromARGB(255, 7, 7, 7),
+                          title: 'Vincenzo',
+                          image: 'assets/images/vincenzo.jpeg',
+                        ),
+                        SizedBox(width: 5), // Spacer between cards
+                        CustomCard(
+                          color: Color.fromARGB(255, 7, 7, 7),
+                          title: 'Family by choice',
+                          image: 'assets/images/family-by-choice.jpeg',
+                        ),
+                        CustomCard(
+                          color: Color.fromARGB(255, 7, 7, 7),
+                          title: 'Train to Busan',
+                          image: 'assets/images/train-to-busan.jpeg',
+                        ),
+                        SizedBox(width: 5), // Spacer between cards
+                        CustomCard(
+                          color: Color.fromARGB(255, 7, 7, 7),
+                          title: 'Our Beloved Summer',
+                          image: 'assets/images/our-beloved-summer.jpeg',
+                        ),
+                        SizedBox(width: 5), // Spacer between cards
+
+                        CustomCard(
+                          color: Color.fromARGB(255, 7, 7, 7),
+                          title: 'Welcome To Samdal-ri',
+                          image: 'assets/images/welcome-to-samdal-ri.jpeg',
+                        ),
+
+                        SizedBox(width: 5), // Spacer between cards
+                        CustomCard(
+                          color: Color.fromARGB(255, 7, 7, 7),
+                          title: 'True Beauty',
+                          image: 'assets/images/true-beauty.jpeg',
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
             ),
           ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildCard(String title, Color color) {
-    return SizedBox(
-      height: 150,
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
-        color: color,
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Text(
-            title,
-            style: const TextStyle(fontSize: 18, color: Colors.white),
-          ),
         ),
       ),
     );
@@ -237,8 +251,8 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
-      width: 150,
+      // height: 200,
+      // width: 100,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
       ),
@@ -264,9 +278,13 @@ class CustomCard extends StatelessWidget {
             Text(
               title,
               style: const TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.white),
+                fontSize: 14,
+                fontWeight: FontWeight.w500,
+                color: Colors.white,
+              ),
+              softWrap:
+                  true, // Membiarkan teks turun ke bawah jika terlalu panjang
+              overflow: TextOverflow.fade,
             ),
           ],
         ),
