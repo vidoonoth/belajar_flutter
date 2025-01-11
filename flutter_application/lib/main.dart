@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      // showSemanticsDebugger: true,
       title: 'Nononton',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -45,6 +46,16 @@ class HomePageState extends State<HomePage> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
+        leading: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.home,
+              color: Colors.white,
+              size: 30,
+            )
+          ],
+        ),
         title: const Text(
           "Nononton",
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
@@ -64,7 +75,7 @@ class HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.white, // Warna teks label yang aktif
         unselectedItemColor: Colors.grey, // Warna teks label yang tidak aktif
-        backgroundColor: const Color.fromARGB(255, 30, 30, 30),
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
         currentIndex: _currentIndex, // Indeks halaman aktif
         onTap: (index) {
           setState(() {
